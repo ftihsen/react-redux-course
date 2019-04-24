@@ -2,9 +2,9 @@
 
 ## Node.js Nedir ?
 
-- Nodejs, javascript tabanlı scriptleri yorumlanabilen ve çalıştırabilen,
-  hızlı, ölçeklenebilir network uygulamaları geliştirmeyi sağlayan bir çalışma zamanı ortamıdır(runtime enviroment)
-  Güncel versiyonuna erişmek için: https://nodejs.org/en/
+Nodejs, javascript tabanlı scriptleri yorumlanabilen ve çalıştırabilen,
+hızlı, ölçeklenebilir network uygulamaları geliştirmeyi sağlayan bir çalışma zamanı ortamıdır(runtime enviroment)
+Güncel versiyonuna erişmek için: https://nodejs.org/en/
 
 Örnek: Example adında bir klasörümüz olsun içerisine index.js adında içerisinde javascript kodlarımızın bulunduğu bir dosyamız olsun. Bu dosya içerisindeki kodların çalıştığını görmek için. Terminalimizi(komut satırımızı) erişmemiz gerekmektedir. Bu aşamada "cd" komutu dosyalar arasında gezinilebilir vs "ls" komutu ilede bulunduğunuz dosya içeriğinde bulunan alt klasörler ,dosyalar vs görüntülenebilir. Örn: cd Desktop/Example
 Example klasörümüze erişimi sağladıktan sonra klasörümüz içerisindeki index.js. dosyamızı çalıştırmak için
@@ -112,12 +112,14 @@ Komutunu terminalimize projemizi çalıştırabiliriz.
 
 Npm Paket Kurulumu
 
+```bash
 npm install <paket adı> --save
+```
 
 - install :paket indirme komutu. Kısıltma olarak npm i <paket adı>
 - --save : indirilen paket bilgisini package.json içerisinde dependencies kısmında inidirilen paket ise node_modules altına yüklenir. Npm 5.0.0 versiyonun altında zorunlu iken nem 5.0.0 versiyonundan sonra --save yazma zorunluluğu paket kurulumları için zorunluluktan kalkmıştır.
 
-ECMAScript (ES) Nedir ?
+## ECMAScript (ES) Nedir ?
 
 ECMAScript bir yazılım dili standardıdır. JavaScript ise bu standartların uygulanmış olduğu en popüler programlama dilidir.
 
@@ -140,14 +142,14 @@ Projeyi kurmuş olduğumuz paketler üzerinden çalıştırmak için package.jso
 Komutunu yazıp.
 
 ```bash
-	npm start
+npm start
 ```
 
 İle projemiz içerisinde bulunan index.js dosyası çalıştırılır.
 
 ! babel-node ile index.js dosyamızın çalıştırılmasını, --presets es2015 kısmı ile de ESX standartında yazılan kodların ES5 formatına dönüştürülerek terminalimizin anlayabiliceği formata uyarlaması gerçekleşir.
 
-> \_NOTE: Projeyi clone ettikten sonra terminalinizde proje dizininizde "npm install" komutunu çalıştırmayı unutmayınız !
+> \_NOTE: Projeyi clone ettikten sonra terminalinizden projemizin bulunduğu dizine erişip "npm install" komutunu çalıştırmayı unutmayınız !
 
 ## Kurulması gerekenler.
 
