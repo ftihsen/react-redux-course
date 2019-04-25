@@ -6,21 +6,21 @@ Nodejs, javascript tabanlı scriptleri yorumlanabilen ve çalıştırabilen,
 hızlı, ölçeklenebilir network uygulamaları geliştirmeyi sağlayan bir çalışma zamanı ortamıdır(runtime enviroment)
 Güncel versiyonuna erişmek için: https://nodejs.org/en/
 
-Örnek: Example adında bir klasörümüz olsun içerisine index.js adında içerisinde javascript kodlarımızın bulunduğu bir dosyamız olsun. Bu dosya içerisindeki kodların çalıştığını görmek için. Terminalimizi(komut satırımızı) erişmemiz gerekmektedir. Bu aşamada "cd" komutu dosyalar arasında gezinilebilir vs "ls" komutu ilede bulunduğunuz dosya içeriğinde bulunan alt klasörler ,dosyalar vs görüntülenebilir. Örn: cd Desktop/Example
-Example klasörümüze erişimi sağladıktan sonra klasörümüz içerisindeki index.js. dosyamızı çalıştırmak için
+Örnek: Example adında masaüstünde bir klasörümüz olsun içerisine index.js adında içerisinde javascript kodlarımızın bulunduğu bir dosyamız olsun. Bu dosya içerisindeki kodların çalıştığını görmek için. Terminalimizi(komut satırımızı) erişmemiz gerekmektedir. Bu aşamada "cd" komutu dosyalar arasında gezinilebilir vs "ls" komutu ilede bulunduğunuz dosya içeriğinde bulunan alt klasörler ,dosyalar vs görüntülenebilir. Örn: cd Desktop/Example
+Example klasörümüze erişimi sağladıktan sonra klasörümüz içerisindeki index.js dosyamızı çalıştırmak için
 
 ```bash
-     node index.js
+node index.js
 ```
 
-Komutunu çalıştırarak index.js dosyamız içerindeki yazmış olduğumuz olduğumuz javascript kodları çalıştırma işlemi gerçekleşicektir.
+Komutunu çalıştırarak index.js dosyamız içerindeki yazmış olduğumuz javascript kodları çalıştırma işlemi gerçekleşicektir.
 
 ## Npm Nedir ?
 
 npm (Node Package Modules), Node.js için bir takım script’lerin otomatik olarak indirilmesini, güncellenmesini,
-silinmesini sağlayan bir paket yöneticisidir. Komut Satırı (Command Port) üzerinden çalışır. Node.js kurulumu ile birlikte gelmektedir.
+silinmesini sağlayan bir paket yöneticisidir. Komut Satırı (terminal) üzerinden çalışır. Node.js kurulumu ile birlikte gelmektedir.
 Projelerde kullanılacak olan teknolojilere yönelik npm versiyonları değişebilmektedir. Bunun için sisteminizde kullandığınız node ve npm
-versiyonunu öğrenmek için komut satırına(terminale);
+versiyonunu öğrenmek için komut satırına(terminal);
 
 ```bash
 node -v
@@ -49,8 +49,7 @@ Npm ile temel olarak yapabileceğimiz şeyler ise şöyledir :
 ! Npm komut satırı üzerinden çalışan bir uygulamadır.
 
 Projede kullanılacak teknolojinin ihtiyacı olan bir node ve npm versiyonu sistemimizde yoksa
-yeni versiyonu sistemimize kurmamız gerekmektedir. Fakat unutulmaması gereken konulardan biride kurmuş olduğunuz yeni node ve npm paketi eski projelerinizde
-sorun çıkarabilir. Bunun için nvm (node version manager) kurulumu yapılmalıdır. NVM sayesinde makinenizde birden fazla Node.js versiyonuna sahip olup sisteminizde olan node ve npm
+yeni versiyonu sistemimize kurmamız gerekmektedir. Fakat unutulmaması gereken konulardan biride kurmuş olduğunuz yeni node ve npm paketi eski projelerinizde sorun çıkarabilir. Bunun için nvm (node version manager) kurulumu yapılmalıdır. NVM sayesinde makinenizde birden fazla Node.js versiyonuna sahip olup sisteminizde olan node ve npm
 versiyonları arasında geçiş yapabilirsiniz.
 
 Yeni node ve npm versiyonu kurmak için
@@ -87,7 +86,7 @@ npm init -y
 
 yazarsanız eğer tüm soruları otomatik olarak geçecektir. Daha sonra dosyadan değişiklik yapabilirsiniz.
 
-Örnek2: İlk örnekteki yazmış olduğumuz kodların bulunduğu Example klasörü içerisinde oluşturulduğumuzu varsayarsak Example klasör içeriğinde artık
+Örnek2: İlk örnekte ki yazmış olduğumuz kodların bulunduğu Example klasörü içerisinde oluşturulduğumuzu varsayarsak Example klasör içeriğinde artık
 
 - index.js
 - package.json
@@ -100,7 +99,9 @@ node index.js
 
 Yazmamız gerekmekteydi. Projemizi package.json üzerinden çalıştırmak için, package.json dosyasının içerisindeki "scripts" kısmının içerisine "start" scriptimizi yazabilir ve npm ile çalıştırabiliriz.
 
-> \_NOTE: "start": "node index.js",
+```bash
+ "start": "node index.js"
+```
 
 Scriptini package.json dosyamıza ekledikten sonra projemizi artık çalıştırmak için
 
@@ -110,14 +111,19 @@ npm start
 
 Komutunu terminalimize projemizi çalıştırabiliriz.
 
-Npm Paket Kurulumu
+Npm ile Paket Kurulumu
 
 ```bash
 npm install <paket adı> --save
 ```
 
-- install :paket indirme komutu. Kısıltma olarak npm i <paket adı>
-- --save : indirilen paket bilgisini package.json içerisinde dependencies kısmında inidirilen paket ise node_modules altına yüklenir. Npm 5.0.0 versiyonun altında zorunlu iken nem 5.0.0 versiyonundan sonra --save yazma zorunluluğu paket kurulumları için zorunluluktan kalkmıştır.
+- install :paket indirme komutu. Kısıltma olarak
+
+```bash
+npm i <paket adı>
+```
+
+- --save : indirilen paket bilgisini package.json içerisinde dependencies kısmında, indirilen paket ise node_modules altına yüklenir. Npm 5.0.0 versiyonun altında zorunlu iken npm 5.0.0 versiyonundan sonra --save yazma zorunluluğu paket kurulumları için zorunluluktan kalkmıştır.
 
 ## ECMAScript (ES) Nedir ?
 
